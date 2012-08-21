@@ -1,0 +1,15 @@
+%h1 Listing users
+
+%p= link_to 'New User', new_user_path, class: 'btn btn-success' 
+
+%table{class: 'table table-bordered table-striped', style: 'margin-top: 20px;'}
+  %tr
+    %th Name
+    %th Email
+
+  - @users.each do |user|
+    %tr
+      %td= user.name
+      %td= user.email 
+      %td{style: 'text-align: center;'}= link_to 'Edit', edit_user_path(user), class: 'btn btn-info'
+      %td{style: 'text-align: center;'}= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger' 

@@ -1,0 +1,15 @@
+!!!
+%html
+  %head
+    %title RouteCaptain
+    %meta{:charset => "utf-8"}
+      = stylesheet_link_tag 'admin'
+      = javascript_include_tag 'admin'
+      = csrf_meta_tags
+  %body
+    .container#container
+      - flash.each do |name, msg| 
+        = content_tag :div, msg, :id => "flash_#{name}" 
+      %div{:style => "margin-top:20px; margin-bottom: 30px;"}
+        = image_tag("logo_b.png")
+      = yield

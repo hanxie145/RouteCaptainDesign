@@ -1,0 +1,64 @@
+// Set the correct sprite paths
+$iconSpritePath: asset-url('glyphicons-halflings.png', image);
+$iconWhiteSpritePath: asset-url('glyphicons-halflings-white.png', image);
+
+$navbarBackgroundHighlight: #3D368B;
+$navbarBackground: #232051;
+$navbarText: #eee;
+//$navbarLinkColor: #eee;
+
+@import "bootstrap";
+
+body { padding-top: 20px; }
+
+@import "bootstrap-responsive";
+
+.navbar .brand {
+  color: #FAFFB8;
+}
+
+#multiselect_option_checkbox {
+  display: inline;
+}
+
+#multiselect_option_value {
+  display: inline;
+}
+
+.ui-multiselect {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#error-explanation {
+  background-color: #FDDFDE;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+#company_show tr td:first-child {
+  width: 20%;
+  font-weight: bold;
+}
+
+#company_show tr td:last-child {
+  text-align: center;
+}
+
+.sub tbody tr td {
+  vertical-align: middle;
+}
+
+#error-explanation b {
+  margin-left: 15px;
+}
+
+#error-explanation li {
+  margin-left: 40px;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

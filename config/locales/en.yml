@@ -1,0 +1,50 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+    mongoid:
+        errors:
+            models:
+                user:
+                    attributes:
+                        email:
+                            email_format: "not an email address"
+                            email: "this email address is invalid"
+                            presence: "please fill in field"
+                            email_banned: "this email provider is disallowed"
+                            uniqueness: "this email is already taken"
+                        password:
+                            presence: "please fill in field"
+                            confirmation: "password does not match"
+                            length: "password must be at least 3 characters long"
+                        password_confirmation:
+                            presence: "please fill in field"
+                company:
+                    attributes:
+                        email:
+                            email_format: "not an email address"
+                            email: "this email address is invalid"
+                            presence: "please fill in field"
+                            email_banned: "this email provider is disallowed"
+                            uniqueness: "this email is already taken"
+                        name:
+                            presence: "please fill in field"
+                        abv:
+                            presence: "please fill in field"
+                        url:
+                            presence: "please fill in field"
+                            url: "not a valid website address"
+                        tel:
+                            presence: "please fill in field"
+                        status:
+                            presence: "please check a radio button"
+                        exchange:
+                            presence: "please select an option"
+                guest:
+                    attributes:
+                        email:
+                            email_format: "not an email address"
+                            email: "this email address is invalid"
+                            presence: "please fill in field"
+                            email_banned: "this email provider is disallowed"
+                            uniqueness: "this email is already taken"

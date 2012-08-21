@@ -1,0 +1,8 @@
+= simple_form_for @user do |f| 
+  = f.error_notification
+
+  = f.input :name, :label => 'Name:'
+  = f.input :email, :label => 'Email:' 
+
+  %div.actions{style: 'margin-top: 20px;'}
+    = f.button :submit, :value => "Create!", :class => 'btn btn-primary' 
