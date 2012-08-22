@@ -6,4 +6,8 @@ class HomeController < ApplicationController
       redirect_to app_path
     end
   end
+
+  def landing 
+  end
+  
 end

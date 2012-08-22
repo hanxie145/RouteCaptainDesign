@@ -5,11 +5,15 @@
     %meta{:charset => "utf-8"}
       = stylesheet_link_tag 'admin'
       = javascript_include_tag 'admin'
+      = javascript_include_tag 'http://open.mapquestapi.com/sdk/js/v7.0.s/mqa.toolkit.js'
       = csrf_meta_tags
+    = render 'layouts/shim'
   %body
-    .container#container
+    = render 'layouts/header'
+    .container.row
       - flash.each do |name, msg| 
         = content_tag :div, msg, :id => "flash_#{name}" 
       %div{:style => "margin-top:20px; margin-bottom: 30px;"}
         = image_tag("logo_b.png")
       = yield
+    = render 'layouts/footer'

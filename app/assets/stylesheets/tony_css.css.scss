@@ -1,0 +1,818 @@
+@import "bootstrap";
+
+/* mixins, variables, etc. */
+
+$grayMediumLight: #eaeaea;
+
+/* universal */
+
+.container {
+  .row {
+  margin-top: 7.6em; 
+  }
+  
+}
+
+.hero-unit{
+  background-color: rgba(0, 92, 255, 0.31); 
+}
+
+body {
+  padding-top: 60px;
+  background-image:url('polaroid.png');
+}
+
+
+h3{
+  padding-bottom: 10px; 
+}
+
+html {
+  overflow-y: scroll;
+}
+
+#user_phone {
+  font-size: 20px; 
+}
+
+#inquiry_id { 
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+body {
+  padding-top: 60px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $grayLight;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+
+/* header */
+
+.navbar-inner {
+  height: 70px; 
+  background-image: none; 
+  background-color: white; 
+}
+
+ul.nav.nav-pills.pull-right {
+  margin-top: 1.6em; 
+}
+
+.navbar-fixed-top .navbar-inner {
+  //background-image:url('low_contrast_linen.png');
+}
+
+.navbar .nav {
+  li {
+    a{
+      font-size: 1.5em; 
+      &:hover {
+        color: black; 
+      }
+    }
+  }  
+}
+
+#logo {
+  margin-left: -1000em; 
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+  .logo2 {
+    float: left; 
+    margin-top: 1em; 
+}
+
+/* footer */
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  a {
+    color: $gray;
+    &:hover { 
+      color: $grayDarker;
+    }
+  }  
+  small { 
+    float: left; 
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* mixins, variables, etc. */ 
+
+$grayMediumLight: #eaeaea; 
+
+@mixin box_sizing {
+  -moz-boz-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
+
+/* Misc. */
+
+.debug_dump{
+  clear:both; 
+  float: left; 
+  width: 100%; 
+  margin-top: 45px; 
+  @include box_sizing;
+}
+
+/*sidebar */ 
+
+.stats {
+  overflow: auto; 
+  a{ 
+    float:left; 
+    padding: 0 10px; 
+    border-left: 1px solid $grayLighter; 
+    color: gray; 
+    &:first-child {
+      padding-left: 0; 
+      border: 0; 
+    }
+    &:hover{ 
+      text-decoration: none; 
+      color: $blue;
+      }
+  }
+  strong {
+    display: block; 
+  }
+}
+
+.user_avatars{
+  overflow: auto; 
+  margin-top: 10px; 
+  .gravatar{ 
+    margin: 1px 1px; 
+  }
+}
+
+aside{
+  section{
+    padding: 10px 0; 
+    border-top: 1px solid $grayLighter;
+    &:first-child{
+      border: 0px; 
+      padding-top: 0;
+    }
+    span {
+      display: block; 
+      margin-bottom: 3px; 
+      line-height: 1px;
+    }
+    h1{
+      font-size: 1.6em; 
+      text-align: left; 
+      letter-spacing: -1px; 
+      margin-bottom: 3px
+    }
+  }
+}
+
+.gravatar{
+  float:left; 
+  margin-right: 10px; 
+}
+
+/* forms */ 
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb; 
+  width: 100%; 
+  padding: 10px; 
+  height: auto; 
+  margin-bottom: 15px; 
+  @include box_sizing;
+}
+
+#error_explanation {
+  color: #f00; 
+  ul{
+    list-style: none; 
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors{
+  @extend .control-group;
+  @extend .error; 
+}
+
+/* users index */ 
+
+.users {
+  list-style: none; 
+  margin: 0; 
+  li {
+    overflow: auto; 
+    padding: 10px 0; 
+    border-top: 1px solid $grayLighter;
+    &:last-child {
+      border-bottom: 1px solid $grayLighter;
+    }
+  }
+}
+
+/* microposts */ 
+
+.microposts {
+  list-style: none; 
+  margin: 10px 0 0 0; 
+
+  li{
+    padding: 10px 0; 
+    border-top: 1px solid #e8e8e8;
+  }
+}
+
+.content {
+  display: block;
+}
+
+.timestamp{
+  color: $grayLight;
+}
+
+.gravatar {
+  float: left; 
+  margin-right: 10px;
+}
+
+aside {
+  textarea {
+    height: 100px; 
+    margin-bottom: 5px;
+  }
+  section{
+    span{
+      line-height: 15px; 
+    }
+  }
+}
+
+/* landing */ 
+
+.hero-unit{
+  height: 650px; 
+  width: 900px; 
+  background-image:url('truck.png');
+  margin-top: -3em; 
+}
+
+.landingcaptioncontiner{
+  margin-top:50px; 
+  .span6{
+    margin-top: 65px; 
+  }
+  .span6 h2{
+    color:black; 
+  }
+  .span6 {
+    width: 400px;
+  }
+  .span6 a.btn.btn-large.btn-primary {
+    margin-top: 1em; 
+  }
+}
+
+
+
+
+
+
+#map{
+  width:634px; 
+  height:742px;
+  position: relative;
+  margin-left: 25.1em
+}
+
+p {
+  font: 1.3em; 
+}
+
+// .home-container {
+//  height: 2000px; 
+// } 
+
+/* Custom Jill Design CSS */ 
+
+
+
+#examplemap{
+  margin-left:25em;
+  margin-top:5em; 
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #ffffff;
+}
+#page-wrapper {
+  position: relative;
+  width: 960px;
+  /* centers the document */
+  margin: 0 auto;
+  /*
+  hides anything drawn off canvas.
+  remove overflow and height to see things drawn off canvas.
+  */
+  overflow: hidden;
+  height: 1000px;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+.rectangle {
+  background: #000000;
+  border: none;
+  width: 961px;
+  height: 11px;
+  border-radius: 0px;
+  position: absolute;
+  top: -1px;
+  left: 0px;
+}
+.image {
+  width: 213px;
+  height: 53px;
+  position: absolute;
+  top: 33px;
+  left: 25px;
+}
+/*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+ .icon {
+  width: 25px;
+  font-size: 25px;
+  height: 25px;
+  float: none;
+  text-shadow: none;
+  color: rgb(109, 129, 194);
+  position: absolute;
+  top: 77px;
+  left: 861px;
+}
+/*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+ .icon-1 {
+  width: 25px;
+  font-size: 25px;
+  height: 25px;
+  float: none;
+  text-shadow: none;
+  color: rgb(109, 129, 194);
+  position: absolute;
+  top: 77px;
+  left: 890px;
+}
+.image-1 {
+  width: 1080px;
+  height: 646px;
+  position: absolute;
+  top: 116px;
+  left: 150px;
+}
+.rectangle-1 {
+  background: #fffcf2;
+  border: none;
+  width: 327px;
+  height: 742px;
+  border-radius: 0px;
+  position: absolute;
+  top: 118px;
+  left: 0px;
+}
+.basic-button {
+  width: 77px;
+  height: 30px;
+  border-radius: 1px;
+  color: rgb(0, 0, 0);
+  font-family: arial;
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: none;
+  display: table;
+  border: none;
+  background-color: rgb(243, 240, 255);
+  float: none;
+  box-shadow: rgb(128, 128, 128) 0px 1px 5px 0px inset;
+  -webkit-box-shadow: rgb(128, 128, 128) 0px 1px 5px 0px inset;
+  background-image: -webkit-linear-gradient(270deg, rgb(243, 240, 255) 0%, rgb(178, 175, 191) 100%);
+  font-style: normal;
+  position: absolute;
+  top: 43px;
+  left: 146px;
+}
+.basic-button span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: none;
+}
+.basic-button-1 {
+  width: 113px;
+  height: 30px;
+  border-radius: 1px;
+  color: rgb(0, 0, 0);
+  font-family: arial;
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: none;
+  display: table;
+  border: none;
+  background-color: rgb(243, 240, 255);
+  float: none;
+  box-shadow: rgb(128, 128, 128) 0px 1px 5px 0px inset;
+  -webkit-box-shadow: rgb(128, 128, 128) 0px 1px 5px 0px inset;
+  background-image: -webkit-linear-gradient(270deg, rgb(243, 240, 255) 0%, rgb(178, 175, 191) 100%);
+  font-style: normal;
+  position: absolute;
+  top: 43px;
+  left: 27px;
+}
+.basic-button-1 span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: none;
+}
+/*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+ .icon-2 {
+  width: 16px;
+  font-size: 16px;
+  height: 16px;
+  float: none;
+  text-shadow: none;
+  color: rgb(64, 64, 64);
+  position: absolute;
+  top: 53.33000000000001px;
+  left: 243px;
+}
+/*
+Using this css requires Font Awesome:
+http://fortawesome.github.com/Font-Awesome/
+*/
+ .icon-3 {
+  width: 16px;
+  font-size: 16px;
+  height: 16px;
+  float: none;
+  text-shadow: none;
+  color: rgb(64, 64, 64);
+  position: absolute;
+  top: 53.66999999999999px;
+  left: 265.67px;
+}
+.rectangle-2 {
+  background: #d9d9d9;
+  border: none;
+  width: 296px;
+  height: 3px;
+  border-radius: 0px;
+  position: absolute;
+  top: 90px;
+  left: 19px;
+}
+.basic-button-2 {
+  width: 18px;
+  height: 20px;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  font-family: arial;
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: none;
+  display: table;
+  border: none;
+  background-color: rgb(61, 136, 204);
+  float: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  background-image: -webkit-linear-gradient(270deg, rgb(61, 136, 204) 0%, rgb(3, 81, 153) 100%);
+  font-style: normal;
+  position: absolute;
+  top: 111px;
+  left: 31px;
+}
+.basic-button-2 span {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  text-shadow: none;
+}
+.textinput {
+  width: 194px;
+  height: 18px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 112px;
+  left: 58px;
+}
+.textinput-1 {
+  width: 194px;
+  height: 18px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 152px;
+  left: 58px;
+}
+.textinput-2 {
+  width: 194px;
+  height: 18px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 192px;
+  left: 58px;
+}
+.textinput-3 {
+  width: 194px;
+  height: 18px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 232px;
+  left: 58px;
+}
+.textinput-4 {
+  width: 194px;
+  height: 18px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 272px;
+  left: 58px;
+}
+.textinput-5 {
+  width: 194px;
+  height: 17px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 313px;
+  left: 58px;
+}
+.textinput-6 {
+  width: 194px;
+  height: 17px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 353px;
+  left: 58px;
+}
+.textinput-7 {
+  width: 194px;
+  height: 17px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 393px;
+  left: 58px;
+}
+.textinput-8 {
+  width: 194px;
+  height: 17px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 433px;
+  left: 58px;
+}
+.textinput-9 {
+  width: 194px;
+  height: 17px;
+  padding: 5px 8px;
+  font-size: 12pt;
+  font-family:'Helvetica Neue';
+  color: rgb(51, 51, 51);
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(207, 207, 207);
+  border-radius: 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.0976563) 0px 1px 8px 0px inset;
+  font-weight: normal;
+  float: none;
+  text-shadow: none;
+  font-style: normal;
+  position: absolute;
+  top: 473px;
+  left: 58px;
+}
+.rectangle-3 {
+  background: #2772ff;
+  background-image: -moz-linear-gradient(270deg, #2772ff 0%, #133980 100%);
+  background-image: -webkit-linear-gradient(270deg, #2772ff 0%, #133980 100%);
+  background-image: -o-linear-gradient(270deg, #2772ff 0%, #133980 100%);
+  background-image: linear-gradient(270deg, #2772ff 0%, #133980 100%);
+  border: none;
+  width: 961px;
+  height: 33px;
+  border-radius: 0px;
+  position: absolute;
+  top: 107px;
+  left: 0px;
+}
+.rectangle-4 {
+  background: #a6a6a6;
+  border: none;
+  width: 964px;
+  height: 2px;
+  border-radius: 0px;
+  margin: 32px 0 0 -3px;
+}
+.rectangle-5 {
+  background: #000000;
+  border: none;
+  width: 964px;
+  height: 125px;
+  border-radius: 0px;
+  position: absolute;
+  top: 878px;
+  left: -4px;
+}
+.rectangle-6 {
+  background: #bfbfbf;
+  border: none;
+  width: 969px;
+  height: 344px;
+  border-radius: 0px;
+  position: absolute;
+  top: 628px;
+  left: 0px;
+}
