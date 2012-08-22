@@ -10,4 +10,7 @@ class HomeController < ApplicationController
   def landing 
   end
   
+  def product 
+  end
+
 end

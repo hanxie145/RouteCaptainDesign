@@ -4,6 +4,28 @@
 
 $grayMediumLight: #eaeaea;
 
+
+/* product page */ 
+
+.productcontainer {
+  .span6 hero-unit {
+    width: 530px; 
+  }
+  h2 {
+  color: black; 
+  float: left; 
+  padding-bottom: 1em; 
+  }
+}
+
+.map{
+  margin-left: auto; 
+  margin-right: auto; 
+  color: black; 
+  width: 650px; 
+}
+
+
 /* universal */
 
 .container {
@@ -19,6 +41,7 @@ $grayMediumLight: #eaeaea;
 
 body {
   padding-top: 60px;
+  height: 1000px; 
   background-image:url('polaroid.png');
 }
 
@@ -151,12 +174,12 @@ footer {
   small { 
     float: left; 
   }
-  ul {
+  nav ul {
     float: right;
     list-style: none;
+    margin-right: 5em; 
     li {
       float: left;
-      margin-left: 10px;
     }
   }
 }
@@ -317,7 +340,7 @@ aside {
 
 /* landing */ 
 
-.hero-unit{
+.landing.hero-unit{
   height: 650px; 
   width: 900px; 
   background-image:url('truck.png');

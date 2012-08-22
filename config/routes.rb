@@ -10,6 +10,7 @@ Emailify::Application.routes.draw do
   match "login", :to => "sessions#new"
   match "logout", :to => "sessions#destroy"
   match "home", to: "home#index"
+  match "product", to: "home#product"
 
   root :to => "home#landing"
 end
